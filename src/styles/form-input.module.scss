@@ -1,0 +1,33 @@
+._formInput {
+  input[type='text'] {
+    display: flex;
+    height: 50px;
+    padding: 0 16px;
+    font-size: 14px;
+    appearance: none;
+  }
+}
+
+._formInput.dl01 {
+  display: flex;
+  flex-direction: column;
+
+  dt {
+    padding-bottom: 5px;
+  }
+
+  dd {
+    position: relative;
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+
+    input[type='tel'] {
+      &:disabled {
+        background: #f1f1f1;
+      }
+
+      transition: 0.2s ease-in-out;
+    }
+  }
+}
