@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 import styles from 'src/styles/form-input.module.scss';
 
@@ -8,20 +8,25 @@ export interface FormInputProps {
 }
 
 export const FormInput = ({ formType, memo}: FormInputProps) => {
-  // TODO: useForm周り実装
-  // const { register, setValue, trigger, getValues } = useFormContext();
+  const { register } = useFormContext();
+
+  const [userNamePreview, setUserNamePreview] = useState('');
 
   switch (formType) {
     case 'user-name':
       return (
         <dl className={`${styles['_formInput']} ${styles['dl01']}`}>
-          <dt className={styles['_title']}>ユーザー名</dt>
+          <dt className={styles['_title']}>ユーザー名 {userNamePreview}</dt>
           <dd>
             <input
               id="user-name"
               type="text"
               placeholder='ユーザー名'
-              // {...register('user-name')}
+              {...register('user-name' , {
+                onChange: (e) => {
+                  setUserNamePreview(e.target.value)
+                }
+              })}
             />
             <span className={styles['memo']}>{memo}</span>
           </dd>
