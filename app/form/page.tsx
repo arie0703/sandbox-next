@@ -1,9 +1,10 @@
 'use client'
 
-import { FieldValues, FormProvider, useForm } from 'react-hook-form';
+import { FormProvider, useForm } from 'react-hook-form';
 
 import { FormInput } from '@/src/components/FormInput'
 import styles from 'src/styles/form.module.css'
+import { SubmitButton } from '@/src/components/SubmitButton';
 
 export default function Form() {
 
@@ -20,6 +21,7 @@ export default function Form() {
           <h2>Sample Form</h2>
           <FormInput formType='user-name' />
         </form>
+        <SubmitButton buttonText={'Submit'} />
       </FormProvider>
     </div>
   )

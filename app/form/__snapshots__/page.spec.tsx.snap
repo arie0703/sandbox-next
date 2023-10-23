@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form スナップショットテスト 1`] = `
+<DocumentFragment>
+  <div
+    class="form"
+  >
+    <form>
+      <h2>
+        Sample Form
+      </h2>
+      <dl
+        class="_formInput dl01"
+      >
+        <dt
+          class="_title"
+        >
+          ユーザー名 
+        </dt>
+        <dd>
+          <input
+            id="user-name"
+            name="user-name"
+            placeholder="ユーザー名"
+            type="text"
+          />
+          <span
+            class="memo"
+          />
+        </dd>
+      </dl>
+    </form>
+    <div
+      class="submitButton"
+    >
+      Submit
+    </div>
+  </div>
+</DocumentFragment>
+`;
