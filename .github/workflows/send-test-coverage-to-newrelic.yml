@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v3
       - name: "Send To New Relic"
         shell: bash
-        run: sh ./.github/scripts/get-coverage.sh
+        run: bash ./.github/scripts/get-coverage.sh
         env:
           GH_REPO: ${{ github.repository }}
           EVENT_TYPE: JEST_COVERAGE
