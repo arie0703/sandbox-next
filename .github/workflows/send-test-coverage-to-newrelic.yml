@@ -8,14 +8,14 @@ jobs:
   send-coverage-data:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
-      steps:
-        - name: checkout
-          uses: actions/checkout@v3
-        - name: "Send To New Relic"
-          shell: bash
-          run: sh ./.github/scripts/get-coverage.sh
-          env:
-            GH_REPO: ${{ github.repository }}
-            EVENT_TYPE: JEST_COVERAGE
-            NEW_RELIC_ACCOUNT_ID: ${{ vars.NEW_RELIC_ACCOUNT_ID }}
-            NEW_RELIC_LICENSE_KEY: ${{ secrets.NEW_RELIC_LICENSE_KEY }}
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: "Send To New Relic"
+        shell: bash
+        run: sh ./.github/scripts/get-coverage.sh
+        env:
+          GH_REPO: ${{ github.repository }}
+          EVENT_TYPE: JEST_COVERAGE
+          NEW_RELIC_ACCOUNT_ID: ${{ vars.NEW_RELIC_ACCOUNT_ID }}
+          NEW_RELIC_LICENSE_KEY: ${{ secrets.NEW_RELIC_LICENSE_KEY }}
