@@ -1,0 +1,27 @@
+name: "Send Coverage Data to New Relic"
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  send-coverage-data:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: Node Setup
+        uses: actions/setup-node@v3.1.1
+        with:
+          node-version: v16.14.2
+      - name: yarn install
+        run: yarn install
+      - name: Send To New Relic
+        shell: bash
+        run: bash ./.github/scripts/get-coverage.sh
+        env:
+          GH_REPO: ${{ github.repository }}
+          EVENT_TYPE: JEST_COVERAGE
+          NEW_RELIC_ACCOUNT_ID: ${{ vars.NEW_RELIC_ACCOUNT_ID }}
+          NEW_RELIC_LICENSE_KEY: ${{ secrets.NEW_RELIC_LICENSE_KEY }}

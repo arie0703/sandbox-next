@@ -1,0 +1,18 @@
+name: "coverage"
+on:
+  pull_request:
+    branches:
+      - main
+      - actions-sandbox
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: test
+        uses: ArtiomTr/jest-coverage-report-action@v2
+        with:
+          test-script: yarn test:coverage
+          package-manager: "yarn"
