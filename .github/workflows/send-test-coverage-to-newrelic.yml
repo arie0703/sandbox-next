@@ -11,7 +11,13 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      - name: "Send To New Relic"
+      - name: Node Setup
+        uses: actions/setup-node@v3.1.1
+        with:
+          node-version: v16.14.2
+      - name: yarn install
+        run: yarn install
+      - name: Send To New Relic
         shell: bash
         run: bash ./.github/scripts/get-coverage.sh
         env:
