@@ -1,0 +1,28 @@
+name: Jest Coverage Detail
+on:
+  pull_request:
+    types: [labeled]
+
+jobs:
+  tests:
+    if: github.event.label.name == 'coverage-detail'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Node Setup
+        uses: actions/setup-node@v3.1.1
+        with:
+          node-version: v16.14.2
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Unit Test with coverage
+        uses: mattallty/jest-github-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          test-command: "yarn test"
