@@ -2,11 +2,11 @@ name: "Send Coverage Data to New Relic"
 
 on:
   pull_request:
-    types: [closed]
+    types: [labeled]
 
 jobs:
   send-coverage-data:
-    if: github.event.pull_request.merged == true
+    if: github.event.label.name == 'send-newrelic'
     runs-on: ubuntu-latest
     steps:
       - name: checkout
