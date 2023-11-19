@@ -10,7 +10,11 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "screenshots": "storycap --serverCmd 'storybook dev -p 6006' http://localhost:6006",
+    "vrt-before": "storycap -o ./__screenshots__/main --serverCmd 'storybook dev -p 6006' http://localhost:6006",
+		"vrt-after": "storycap -o ./__screenshots__/comparison --serverCmd 'storybook dev -p 6006' http://localhost:6006",
+    "vrt-reg:local": "reg-cli ./__screenshots__/main/** ./__screenshots__/comparison/** ./__screenshots__/diff -R ./__screenshots__/report.html -I true"
   },
   "dependencies": {
     "@types/node": "20.5.1",
@@ -54,7 +58,9 @@
     "jest-dom": "^4.0.0",
     "react-docgen-typescript-plugin": "^1.0.5",
     "react-test-renderer": "^18.2.0",
+    "reg-cli": "^0.17.7",
     "storybook": "^7.5.2",
+    "storycap": "^4.2.0",
     "ts-jest": "^29.1.1",
     "webpack": "^5.89.0"
   },
