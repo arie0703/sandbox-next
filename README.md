@@ -9,3 +9,5 @@
   - UI変更後のstorybookのスクリーンショットを保存する
 - `yarn vrt-reg:local`
   - UI変更前/変更後のスクリーンショットの比較を行う
+- `yarn regression`
+  - reg-suitによるリグレッションテストを実施する
