@@ -33,3 +33,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# storybook
+/__screenshots__
+reg.json
+.reg
