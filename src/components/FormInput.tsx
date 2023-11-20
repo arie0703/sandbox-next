@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useFormContext } from 'react-hook-form';
-import styles from '@/styles/form-input.module.css';
+import styles from '@/styles/components/form-input.module.scss';
 
 export interface FormInputProps {
   formType: string

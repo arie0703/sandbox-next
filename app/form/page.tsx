@@ -3,7 +3,7 @@
 import { FormProvider, useForm } from 'react-hook-form';
 
 import { FormInput } from '@/components/FormInput'
-import styles from '@/styles/form.module.css'
+import styles from '@/styles/pages/form.module.scss'
 import { SubmitButton } from '@/components/SubmitButton';
 
 export default function Form() {

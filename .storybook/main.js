@@ -5,7 +5,11 @@ module.exports = {
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    'storybook-addon-next-router'
+    'storybook-addon-next-router',
+    {
+      name: '@storybook/addon-styling',
+      options: {},
+    },
   ],
 
   framework: {
@@ -17,23 +21,6 @@ module.exports = {
 
   webpackFinal: async (config) => {
     config.resolve.alias['@'] = path.resolve(__dirname, '../src/');
-    config.module.rules.push({
-      test: /\.scss$/,
-      use: [
-        'style-loader',
-        {
-          loader: 'css-loader',
-          options: {
-            modules: {
-              auto: true,
-            },
-            url: false,
-          },
-        },
-        'sass-loader',
-      ],
-      include: path.resolve(__dirname, '../src/'),
-    });
     return config;
   }
 };
