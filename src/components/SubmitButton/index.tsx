@@ -1,4 +1,4 @@
-import styles from '@/styles/components/submit-button.module.css';
+import styles from '@/styles/components/submit-button.module.scss';
 
 interface SubmitButtonProps {
   buttonText: string;
