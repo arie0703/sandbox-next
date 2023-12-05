@@ -1,11 +1,15 @@
+import { ArticleCard } from '@/components/ArticleCard/page';
 import styles from '@/styles/pages/qiita.module.scss'
-import { QiitaArticle } from '@/types/qiita';
+import { ArticleData } from '@/types/qiita';
 
 const getQiitaArticles = async () => {
   const url = process.env.HOST_NAME + "/api/qiita"
   try {
-    const articles = await fetch(url)
-      .then(data => data.json())
+    const articles = await fetch(url, {
+      // MEMO: 後でapiのキャッシュ設定をする
+      cache: "no-store",
+    }).then(data => data.json())
+    console.log(articles)
     return articles
   } catch (e) {
     console.log(e)
@@ -22,13 +26,9 @@ export default async function Qiita() {
   return (
     <div className={styles['qiita']}>
       <div>
-        {data.articles.map((article: QiitaArticle) => {
+        {data.articles.map((article: ArticleData) => {
           return (
-          <div key={article.id} className={styles['article']}>
-            <a href={article.url}>
-              <p>{article.title}</p>
-            </a>
-          </div>
+            <ArticleCard title={article.title} url={article.url} tags={article.tags}/>
           )
         })}
       </div>

@@ -17,7 +17,7 @@ export type QiitaArticle = {
   private: boolean,
   reactions_count: number,
   stocks_count: number,
-  tags: Object[]
+  tags: Tag[]
   title: string,
   updated_at: string,
   url: string,
@@ -47,8 +47,14 @@ export type QiitaArticle = {
   slide: boolean
 }
 
+export type Tag = {
+  name: string
+  versions: string[]
+}
+
 export type ArticleData = {
   id: string
   title: string
   url: string
+  tags: Tag[]
 }
