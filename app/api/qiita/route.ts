@@ -23,7 +23,8 @@ export async function GET() {
 		articles.push({
 			id: article.id,
 			title: article.title,
-			url: article.url
+			url: article.url,
+			tags: article.tags
 		})
 	})
 	const response = NextResponse.json({ msg: 'success', articles: articles })
