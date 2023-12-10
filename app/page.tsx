@@ -1,10 +1,9 @@
 import styles from '@/styles/pages/page.module.scss'
-import { WorkContainer } from '@/components/WorkContainer/page'
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <WorkContainer />
+      <a href='/portfolio'>Portfolio</a>
     </main>
   )
 }
