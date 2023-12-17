@@ -1,5 +1,5 @@
 'use client'
-import styles from '@/styles/components/work-card.module.scss';
+import styles from '@/styles/components/Portfolio/work-card.module.scss';
 import Image from 'next/image';
 import { Dispatch, SetStateAction } from 'react';
 

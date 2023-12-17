@@ -1,6 +1,6 @@
 
 'use client'
-import styles from '@/styles/components/menu-bar.module.scss';
+import styles from '@/styles/components/Portfolio/menu-bar.module.scss';
 import { SetStateAction } from 'react';
 
 interface MenuBarProps {

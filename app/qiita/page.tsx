@@ -1,4 +1,4 @@
-import { ArticleCard } from '@/components/ArticleCard/page';
+import { ArticleCard } from '@/components/Portfolio/ArticleCard/page';
 import styles from '@/styles/pages/qiita.module.scss'
 import { ArticleData } from '@/types/qiita';
 

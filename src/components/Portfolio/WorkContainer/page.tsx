@@ -1,5 +1,5 @@
 'use client'
-import styles from '@/styles/components/work-container.module.scss';
+import styles from '@/styles/components/Portfolio/work-container.module.scss';
 import { WorkCard } from '../WorkCard/page';
 import { useState } from 'react';
 import { WorkDescription } from '../WorkDescription/page';

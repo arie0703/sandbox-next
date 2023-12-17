@@ -1,6 +1,6 @@
 
 'use client'
-import styles from '@/styles/components/content-area.module.scss';
+import styles from '@/styles/components/Portfolio/content-area.module.scss';
 import { useState } from 'react';
 import { MenuBar } from '../MenuBar/page';
 import { WorkContainer } from '../WorkContainer/page';

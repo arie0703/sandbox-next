@@ -1,5 +1,5 @@
 import styles from '@/styles/pages/portfolio.module.scss'
-import { ContentArea } from '@/components/ContentArea/page'
+import { ContentArea } from '@/components/Portfolio/ContentArea/page'
 
 const getQiitaArticles = async () => {
   const url = process.env.HOST_NAME + "/api/qiita"
