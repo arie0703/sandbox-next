@@ -1,5 +1,5 @@
 'use client'
-import styles from '@/styles/components/career-card.module.scss';
+import styles from '@/styles/components/Portfolio/career-card.module.scss';
 
 interface CareerCardProps {
   title: string

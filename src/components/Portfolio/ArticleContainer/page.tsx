@@ -1,5 +1,5 @@
-import { ArticleCard } from '@/components/ArticleCard/page';
-import styles from '@/styles/components/article-container.module.scss'
+import { ArticleCard } from '@/components/Portfolio/ArticleCard/page';
+import styles from '@/styles/components/Portfolio/article-container.module.scss'
 import { ArticleData } from '@/types/qiita';
 
 interface ArticleContainerProps {

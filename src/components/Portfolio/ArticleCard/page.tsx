@@ -1,5 +1,5 @@
 'use client'
-import styles from '@/styles/components/article-card.module.scss';
+import styles from '@/styles/components/Portfolio/article-card.module.scss';
 import { ArticleData, Tag } from '@/types/qiita';
 
 interface ArticleCardProps {

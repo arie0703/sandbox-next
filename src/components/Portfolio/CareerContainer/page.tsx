@@ -1,5 +1,5 @@
 'use client'
-import styles from '@/styles/components/work-container.module.scss';
+import styles from '@/styles/components/Portfolio/work-container.module.scss';
 import { CareerCard } from '../CareerCard/page';
 
 export const CareerContainer = () => {

@@ -1,5 +1,5 @@
 'use client'
-import styles from '@/styles/components/work-description.module.scss';
+import styles from '@/styles/components/Portfolio/work-description.module.scss';
 
 interface WorkDescriptionProps {
   title: string
