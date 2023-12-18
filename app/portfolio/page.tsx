@@ -1,6 +1,6 @@
 import styles from '@/styles/pages/portfolio.module.scss'
 import { ContentArea } from '@/components/Portfolio/ContentArea/page'
-import { Header } from '@/components/Portfolio/Header/page'
+import { NeonHeaderB } from '@/components/Portfolio/Header/NeonHeaderB/page'
 
 const getQiitaArticles = async () => {
   const url = process.env.HOST_NAME + "/api/qiita"
@@ -25,7 +25,7 @@ export default async function Portfolio() {
 
   return (
     <main className={styles.portfolio}>
-      <Header />
+      <NeonHeaderB />
       <ContentArea articles={data.articles} />
     </main>
   )
