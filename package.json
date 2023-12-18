@@ -15,7 +15,8 @@
     "vrt-before": "storycap -o ./__screenshots__/main --serverCmd 'storybook dev -p 6006' http://localhost:6006",
     "vrt-after": "storycap -o ./__screenshots__/comparison --serverCmd 'storybook dev -p 6006' http://localhost:6006",
     "vrt-reg:local": "reg-cli ./__screenshots__/main/** ./__screenshots__/comparison/** ./__screenshots__/diff -R ./__screenshots__/report.html -I true",
-    "regression": "reg-suit run"
+    "regression": "reg-suit run",
+    "component-new": "hygen component new"
   },
   "dependencies": {
     "@types/node": "20.5.1",
@@ -23,6 +24,7 @@
     "@types/react-dom": "18.2.7",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.18",
+    "hygen": "^6.2.11",
     "jest-environment-jsdom": "^29.7.0",
     "next": "13.4.18",
     "react": "18.2.0",
