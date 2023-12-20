@@ -3,7 +3,7 @@ to: src/components/<%= h.changeCase.pascalCase(name) %>/page.stories.tsx
 unless_exists: true
 ---
 import { StoryObj, Meta } from '@storybook/react';
-import { MenuBar } from './page';
+import { <%= h.changeCase.pascalCase(name) %> } from './page';
 
 const meta: Meta<typeof <%= h.changeCase.pascalCase(name) %>> = {
   title: "<%= h.changeCase.pascalCase(name) %>",
