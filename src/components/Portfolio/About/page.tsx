@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { profile } from '@/consts/Portfolio/profile';
 
 export const About = () => {
-  
-  return(
+
+  return (
     <div className={`${styles['about']}`}>
       <div className={`${styles['about__flex']}`}>
         <div className={`${styles['about__image']}`}>
@@ -24,9 +24,10 @@ export const About = () => {
         <ul>
           {
             profile.experiences.map((experience, index) => {
-              return(
+              return (
                 <div key={index} className={styles['about__experience__card']}>
                   <Image src={experience.image} alt={'image'} width={100} height={100} />
+                  <p className={styles['about__experience__title']}>{experience.title}</p>
                   <p className={styles['about__experience__content']}>{experience.content}</p>
                 </div>
               )

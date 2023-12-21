@@ -1,26 +1,27 @@
 .about {
   .about__flex {
     display: flex;
+
     .about__image {
-        margin-right: 10px;
-    
-        img {
-          border-radius: 50%;
-        }
+      margin-right: 10px;
+
+      img {
+        border-radius: 50%;
       }
-    
-      .about__name {
-        font-size: 1.5rem;
-        font-weight: 400;
-      }
-    
-      .about__introduction {
-        white-space: pre-wrap;
-      }
+    }
+
+    .about__name {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+
+    .about__introduction {
+      white-space: pre-wrap;
+    }
   }
 
   .about__experience {
-    
+
     .about__subtitle {
       text-align: center;
       font-size: 1.5rem;
@@ -30,6 +31,9 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      width: 90%;
+      margin: 0 auto;
+      // max-width: 700px;
 
       &::after {
         // 空の疑似要素を生成し、Flexの並びを左寄せにする
@@ -40,25 +44,36 @@
 
       .about__experience__card {
         background-color: #222;
-        width: 30rem;
-        margin: 10px;
-        padding: 15px;
+        margin: 10px 2px;
+        padding: 12px;
         border-radius: 3px;
+        max-width: 300px;
+        height: 22rem;
+
         img {
           display: block;
           margin: 0 auto;
         }
 
-        .about__experience__content {
-          width: 80%;
+        p {
+          width: 90%;
           margin: 10px auto;
           white-space: pre-wrap;
         }
 
-        
+        .about__experience__title {
+          text-align: center;
+          font-size: 1.2rem;
+        }
+
+        .about__experience__content {
+          font-size: 0.95rem;
+        }
+
+
       }
     }
-    
+
   }
-  
+
 }
