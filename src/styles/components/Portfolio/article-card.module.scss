@@ -4,11 +4,10 @@
   margin: 10px 0;
   border-radius: 5px;
   color: #bcbdbd;
-  
 
   a {
     cursor: pointer;
-    
+
     &:hover {
       text-decoration: underline;
     }
@@ -16,6 +15,7 @@
 
   .articleCard__tags {
     margin-top: 10px;
+
     span {
       background-color: #222;
       padding: 4px 10px;
@@ -24,5 +24,5 @@
       cursor: default;
     }
   }
-  
+
 }
