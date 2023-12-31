@@ -1,6 +1,7 @@
 import styles from '@/styles/components/Portfolio/about.module.scss';
 import Image from 'next/image';
 import { profile } from '@/consts/Portfolio/profile';
+import Link from 'next/link';
 
 export const About = () => {
 
@@ -17,23 +18,18 @@ export const About = () => {
           <p className={styles['about__introduction']}>
             {profile.introduction}
           </p>
+          <div className={styles['about__links']}>
+            {
+              profile.links.map((link) => {
+                return (
+                  <Link href={link.url} target="_blank">
+                    {link.title}
+                  </Link>
+                )
+              })
+            }
+          </div>
         </div>
-      </div>
-      <div className={`${styles['about__experience']}`}>
-        <p className={styles['about__subtitle']}>Experience</p>
-        <ul>
-          {
-            profile.experiences.map((experience, index) => {
-              return (
-                <div key={index} className={styles['about__experience__card']}>
-                  <Image src={experience.image} alt={'image'} width={100} height={100} />
-                  <p className={styles['about__experience__title']}>{experience.title}</p>
-                  <p className={styles['about__experience__content']}>{experience.content}</p>
-                </div>
-              )
-            })
-          }
-        </ul>
       </div>
     </div>
   );

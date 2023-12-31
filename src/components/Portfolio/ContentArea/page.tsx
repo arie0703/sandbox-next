@@ -4,15 +4,10 @@ import styles from '@/styles/components/Portfolio/content-area.module.scss';
 import { useState } from 'react';
 import { MenuBar } from '../MenuBar/page';
 import { WorkContainer } from '../WorkContainer/page';
-import { ArticleContainer } from '../ArticleContainer/page';
-import { ArticleData } from '@/types/qiita';
 import { About } from '../About/page';
+import { Experience } from '../Experience/page';
 
-interface ContentAreaProps {
-  articles: ArticleData[]
-}
-
-export const ContentArea = ({ articles }: ContentAreaProps) => {
+export const ContentArea = () => {
 
   const [selectedItem, setSelectedItem] = useState('Top');
 
@@ -23,10 +18,10 @@ export const ContentArea = ({ articles }: ContentAreaProps) => {
         selectedItem === 'About' && <About />
       }
       {
-        selectedItem === 'Works' && <WorkContainer />
+        selectedItem === 'Experience' && <Experience />
       }
       {
-        selectedItem === 'Outputs' && <ArticleContainer articles={articles} />
+        selectedItem === 'Works' && <WorkContainer />
       }
     </div>
   )

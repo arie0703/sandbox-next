@@ -9,7 +9,7 @@ interface MenuBarProps {
 
 export const MenuBar = ({ setSelectedItem }: MenuBarProps) => {
 
-  const items = ['About', 'Works', 'Outputs']
+  const items = ['About', 'Experience', 'Works']
 
   return (
     <div className={styles['menuBar']}>
