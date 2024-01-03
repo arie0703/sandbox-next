@@ -1,25 +1,32 @@
 
 'use client'
 import styles from '@/styles/components/Portfolio/menu-bar.module.scss';
-import { SetStateAction } from 'react';
 
 interface MenuBarProps {
-  setSelectedItem: (value: SetStateAction<string>) => void
+  items: Array<string>
 }
 
-export const MenuBar = ({ setSelectedItem }: MenuBarProps) => {
+export const MenuBar = ({ items }: MenuBarProps) => {
 
-  const items = ['About', 'Experience', 'Works']
+  const scrollToElement = (item: string) => {
+    const element = document.getElementById(item);
+    if (element)
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
+  }
 
   return (
     <div className={styles['menuBar']}>
-      {items.map((item, index) => {
-        return (
-          <div className={styles['menuBar__item']} key={index} onClick={() => { setSelectedItem(item) }}>
-            <p>{item}</p>
-          </div>
-        )
-      })}
+      <div className={styles['menuBar__flex']}>
+        {items.map((item, index) => {
+          return (
+            <div className={styles['menuBar__item']} key={index} onClick={() => { scrollToElement(item) }}>
+              <p>{item}</p>
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }
