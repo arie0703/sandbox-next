@@ -11,32 +11,32 @@ export const Skills = () => {
   return (
     <div className={`${styles['skills']}`}>
       <div className={`${styles['skills__container']} ${selectedItem ? styles['selected'] : ''}`}>
-        <h2>Frontend Developing</h2>
+        <h3>Frontend Developing</h3>
         <div className={styles['skills__flex']}>
           {frontendSkills.map((item) => {
             return (
               <div onClick={() => { setSelectedItem(item) }}>
-                <Image src={item.image} width={selectedItem ? 50 : 100} height={selectedItem ? 50 : 100} alt={item.title} />
+                <Image src={item.image} width={selectedItem ? 30 : 80} height={selectedItem ? 30 : 80} alt={item.title} />
               </div>
             )
           })}
         </div>
-        <h2>Testing & DevOps</h2>
+        <h3>Testing & DevOps</h3>
         <div className={styles['skills__flex']}>
           {devOpsSkills.map((item) => {
             return (
               <div onClick={() => { setSelectedItem(item) }}>
-                <Image src={item.image} width={selectedItem ? 50 : 100} height={selectedItem ? 50 : 100} alt={item.title} />
+                <Image src={item.image} width={selectedItem ? 30 : 80} height={selectedItem ? 30 : 80} alt={item.title} />
               </div>
             )
           })}
         </div>
-        <h2>Frontend Developing</h2>
+        <h3>Cloud Developing</h3>
         <div className={styles['skills__flex']}>
           {cloudSkills.map((item) => {
             return (
               <div onClick={() => { setSelectedItem(item) }}>
-                <Image src={item.image} width={selectedItem ? 50 : 100} height={selectedItem ? 50 : 100} alt={item.title} />
+                <Image src={item.image} width={selectedItem ? 30 : 80} height={selectedItem ? 30 : 80} alt={item.title} />
               </div>
             )
           })}
