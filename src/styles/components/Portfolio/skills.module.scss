@@ -1,9 +1,14 @@
 .skills {
+  padding: 2rem 0;
+  display: flex;
+
   .skills__container {
 
-    h2 {
+    margin-right: 50px;
+
+    h3 {
       font-weight: 400;
-      margin-bottom: 4px;
+      margin-bottom: 10px;
     }
 
     .skills__flex {
@@ -29,7 +34,7 @@
   .skills__container.selected {
     margin-bottom: 2.5rem;
 
-    h2 {
+    h3 {
       display: none;
     }
   }
