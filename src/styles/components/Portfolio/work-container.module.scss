@@ -1,8 +1,13 @@
 .workContainer {
   width: 80%;
   margin: 0 auto;
+
   .workContainer__flex {
-    justify-content: center;
     display: flex;
+    margin-bottom: 120px;
+
+    img {
+      margin-right: 45px;
+    }
   }
 }

@@ -6,6 +6,7 @@ import { WorkContainer } from '../WorkContainer/page';
 import { About } from '../About/page';
 import { Skills } from '../Skills/page';
 import { Title } from '@/components/Title/page';
+import { Contact } from '../Contact/page';
 
 export const ContentArea = () => {
 
@@ -20,6 +21,8 @@ export const ContentArea = () => {
       <Skills />
       <Title title={'Works'} />
       <WorkContainer />
+      <Title title={'Contact'} />
+      <Contact />
     </div>
   )
 }
