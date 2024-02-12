@@ -1,5 +1,7 @@
 ._formInput {
-  input[type='text'] {
+
+  input[type='text'],
+  select {
     display: flex;
     height: 50px;
     padding: 0 16px;
