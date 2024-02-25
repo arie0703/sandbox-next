@@ -19,6 +19,7 @@
     "component-new": "hygen component new"
   },
   "dependencies": {
+    "@notionhq/client": "^2.2.14",
     "@prisma/client": "^5.9.1",
     "@types/node": "20.5.1",
     "@types/react": "18.2.20",

@@ -1,13 +1,25 @@
 # sandbox-next
 
-さまざまな検証を行うNext.jsプロジェクト
+さまざまな検証・プロトタイプ開発を行うNext.jsプロジェクト
 
-## VRT
-- `yarn vrt-before` 
-  - UI変更前のstorybookのスクリーンショットを保存する
-- `yarn vrt-after` 
-  - UI変更後のstorybookのスクリーンショットを保存する
-- `yarn vrt-reg:local`
-  - UI変更前/変更後のスクリーンショットの比較を行う
-- `yarn regression`
-  - reg-suitによるリグレッションテストを実施する
+## 各種プロトタイプ
+
+`/portfolio`
+
+ポートフォリオサイトの雛形
+
+`/form`
+
+useFormを使ったユーザー情報登録フォームの雛形
+
+`/flashcard`
+
+Notion APIを利用したフラッシュカードアプリの雛形
+
+## storybook
+`yarn storybook`
+
+## hygen
+`yarn component-new`
+
+コンポーネント名を入力すると、components/配下にindex.tsx, index.stories.tsx, styles/配下にscssファイルが作成される
